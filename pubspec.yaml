@@ -1,0 +1,53 @@
+name: pocket_morty
+description: A new Flutter project.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.19.0 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # локализация
+  flutter_localizations:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+
+  # архитектура
+  equatable: ^2.0.5
+  flutter_bloc: ^8.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+  # иконка для приложения
+  flutter_launcher_icons: ^0.11.0
+
+flutter_icons:
+  # for ios
+  ios: true
+  image_path: "assets/images/ic_launcher.png"
+  remove_alpha_ios: true
+  # for android
+  android: true
+  adaptive_icon_foreground: "assets/images/ic_launcher.png"
+  adaptive_icon_background: "#FFFFFF"
+  # flutter pub run flutter_launcher_icons:main
+
+flutter:
+
+   assets:
+     - assets/images/
+
+   fonts:
+     - family: Montserrat
+       fonts:
+         - asset: assets/fonts/Montserrat-Regular.ttf
+
+   uses-material-design: true
