@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:pocket_morty/app/constants.dart';
 import 'package:pocket_morty/app/presentation/features/characters/pages/characters_page.dart';
 import 'package:pocket_morty/app/presentation/features/episodes/pages/episodes_page.dart';
+import 'package:pocket_morty/app/presentation/features/favourites/pages/favourites_page.dart';
 import 'package:pocket_morty/app/presentation/features/locations/pages/locations_pages.dart';
 import 'package:pocket_morty/app/presentation/features/main/models/tab.dart';
 import 'package:pocket_morty/app/presentation/features/main/models/tabs_source.dart';
 import 'package:pocket_morty/app/presentation/features/main/pages/main_page.dart';
 import 'package:pocket_morty/app/presentation/features/not_found/pages/not_found_page.dart';
+import 'package:pocket_morty/app/presentation/features/settings/pages/settings_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -65,6 +67,22 @@ class MyApp extends StatelessWidget {
           return MaterialPageRoute(
             builder: (context) {
               return const MainPage(_tabsSource);
+            },
+          );
+        }
+
+        if (settings.name == FavouritesPage.navigationPath) {
+          return MaterialPageRoute(
+            builder: (context) {
+              return const FavouritesPage();
+            },
+          );
+        }
+
+        if (settings.name == SettingsPage.navigationPath) {
+          return MaterialPageRoute(
+            builder: (context) {
+              return const SettingsPage();
             },
           );
         }
