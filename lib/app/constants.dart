@@ -4,6 +4,7 @@ import 'package:pocket_morty/utils/hex_color.dart';
 class AppStyle {
   static const String placeHolderPath = 'assets/images/ic_launcher.png';
   static const String fontFamily = 'Montserrat';
+  static const String cTitle = 'All characters';
 
   static const Icon charactersNavigationBarIcon = Icon(Icons.man);
   static const Icon locationsNavigationBarIcon = Icon(Icons.location_on);

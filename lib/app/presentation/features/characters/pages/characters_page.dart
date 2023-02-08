@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pocket_morty/app/constants.dart';
+import 'package:pocket_morty/app/presentation/features/characters/widgets/character_card.dart';
 
 class CharactersPage extends StatelessWidget {
   const CharactersPage({Key? key}) : super(key: key);
@@ -11,7 +12,7 @@ class CharactersPage extends StatelessWidget {
         backgroundColor: AppStyle.appBarColor,
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.favorite),
+            icon: const Icon(Icons.favorite),
             onPressed: () {
               Navigator.pushNamed(
                 context,
@@ -20,11 +21,11 @@ class CharactersPage extends StatelessWidget {
             },
           ),
           IconButton(
-            icon: Icon(Icons.sort),
+            icon: const Icon(Icons.sort),
             onPressed: () {},
           ),
           IconButton(
-            icon: Icon(Icons.settings),
+            icon: const Icon(Icons.settings),
             onPressed: () {
               Navigator.pushNamed(
                 context,
@@ -33,11 +34,16 @@ class CharactersPage extends StatelessWidget {
             },
           ),
         ],
-
-        title: Text('All characters'),
+        title: const Text(AppStyle.cTitle),
       ),
-      body: Center(
-        child: Text('todo'),
+      body: ListView(
+        children: const [
+          CharacterCard(),
+          CharacterCard(),
+          CharacterCard(),
+          CharacterCard(),
+          CharacterCard(),
+        ],
       ),
     );
   }
